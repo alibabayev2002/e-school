@@ -71,7 +71,7 @@
                                     <span class="px-2 border">{{$subject}}</span>
                                     @if(is_array($mark_arr) || is_object($mark_arr))
                                         @foreach($mark_arr as $student=>$mark)
-                                            <span> {{$mark}}</span>
+                                            <span> {{round($mark,2)}}</span>
                                         @endforeach
                                     @endif
                                 </div>
