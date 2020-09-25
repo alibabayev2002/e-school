@@ -210,9 +210,9 @@ class MainController extends Controller
                 foreach ($all_subjects as $sub) {
                     if (isset($count[$stud->id])) {
                         if (!empty(($arr["Ortalama"][$sub][$stud->id]))) {
-                            $arr["Ortalama"][$sub][$stud->id] += round(($arr[$date->format('Y-m-d')][$sub][$stud->id]) / $count[$stud->id],2);
+                            $arr["Ortalama"][$sub][$stud->id] += (($arr[$date->format('Y-m-d')][$sub][$stud->id]) / $count[$stud->id]);
                         } else {
-                            $arr["Ortalama"][$sub][$stud->id] = round(($arr[$date->format('Y-m-d')][$sub][$stud->id]) / $count[$stud->id],2);
+                            $arr["Ortalama"][$sub][$stud->id] = (($arr[$date->format('Y-m-d')][$sub][$stud->id]) / $count[$stud->id]);
                         }
                     }
                     else{
